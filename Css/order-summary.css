@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --Primary-Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Hover-violet: hsl(246, 82%, 62%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* XLarge */
+@media (min-width: 1400px) {
+  .container {
+    width: 1250px;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+button {
+  border: none;
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  background-color: transparent;
+}
+h1 {
+  color: var(--Dark-blue);
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+ul {
+  list-style: none;
+}
+li {
+  display: inline-block;
+}
+body {
+  padding: 25px 0;
+  font-family: "Red Hat Display", sans-serif;
+  min-height: 100vh;
+  background-color: var(--Primary-Pale-blue);
+  background-image: url(../Imgs/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 45%;
+  background-position: top;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+@media (max-width: 650px) {
+  body {
+    background-image: url(../Imgs/pattern-background-mobile.svg);
+    background-size: 100% 30%;
+  }
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+.card {
+  height: 67%;
+  min-height: 550px;
+  max-height: 800px;
+  max-width: 370px;
+  width: 90%;
+  margin: auto;
+  background-color: white;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.card .top {
+  height: 182px;
+  background-image: url(../Imgs/illustration-hero.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.card-body {
+  text-align: center;
+  padding: 2rem 0;
+  max-width: 85%;
+  margin: 0 auto;
+}
+.card-body p {
+  color: var(--Desaturated-blue);
+  font-weight: 500;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+.AP {
+  background-color: var(--Very-pale-blue);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 13px 15px 13px 9px;
+  text-align: start;
+  margin-bottom: 25px;
+}
+.AP ul {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 2fr;
+  align-items: center;
+  justify-content: center;
+}
+.AP img {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.AP ul li img:hover {
+  box-shadow: 0px 0px 6px 0px black;
+  animation-name: spin;
+  animation-iteration-count: infinite;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+@keyframes spin {
+  from {
+    transform: rotate(20deg) scale(1.02);
+    -webkit-transform: rotate(20deg) scale(1.02);
+    -moz-transform: rotate(20deg) scale(1.02);
+    -ms-transform: rotate(20deg) scale(1.02);
+    -o-transform: rotate(20deg) scale(1.02);
+  }
+  to {
+    transform: rotate(-20deg) scale(0.85);
+    -webkit-transform: rotate(-20deg) scale(0.85);
+    -moz-transform: rotate(-20deg) scale(0.85);
+    -ms-transform: rotate(-20deg) scale(0.85);
+    -o-transform: rotate(-20deg) scale(0.85);
+  }
+}
+.AP li:nth-child(2) {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--Dark-blue);
+}
+.AP li:nth-child(2) span {
+  font-weight: 500;
+  color: var(--Desaturated-blue);
+  display: block;
+  margin-top: 5px;
+}
+.AP li:nth-child(3) {
+  justify-self: end;
+}
+.AP li:nth-child(3) a {
+  color: var(--Bright-blue);
+  font-weight: 700;
+  transition: 0.15s;
+  -webkit-transition: 0.15s;
+  -moz-transition: 0.15s;
+  -ms-transition: 0.15s;
+  -o-transition: 0.15s;
+}
+.AP li:nth-child(3) a:hover {
+  color: var(--Hover-violet);
+}
+.proceed {
+  width: 100%;
+  background-color: var(--Bright-blue);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  color: white;
+  padding: 12px;
+  margin-bottom: 25px;
+  box-shadow: 3px 6px 12px 0 hsl(245deg 75% 52% / 40%);
+  transition: 0.13s;
+  -webkit-transition: 0.13s;
+  -moz-transition: 0.13s;
+  -ms-transition: 0.13s;
+  -o-transition: 0.13s;
+}
+.proceed:hover {
+  background-color: var(--Hover-violet);
+  box-shadow: 3px 6px 12px 0 hsl(246, 82%, 62% / 40%);
+}
+.cancel {
+  text-decoration: none;
+  color: var(--Desaturated-blue);
+  font-weight: 700;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+.cancel:hover {
+  color: var(--Dark-blue);
+}
+.attribution {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: -20px;
+  font-size: 14px;
+  text-align: center;
+  color: var(--Dark-Grayish-Blue);
+}
+.attribution a {
+  color: var(--Bright-blue);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 17px;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+.attribution a:hover {
+  color: var(--Hover-violet);
+  text-decoration: underline;
+}
